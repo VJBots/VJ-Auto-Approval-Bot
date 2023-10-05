@@ -1,7 +1,7 @@
 {
     "name": "Auto Approove Bot",
     "description": "Auto approove telegram group/channel join requests bot.",
-    "repository": "https://github.com/ImDenuwan/Auto-Approve-Bot",
+    "repository": "https://github.com/VJBots/VJ-Auto-Approval-Bot",
     "logo":"https://telegra.ph/file/a782e3bbbe40df8a4bb67.jpg",
     "keywords": [
         "Bot",
