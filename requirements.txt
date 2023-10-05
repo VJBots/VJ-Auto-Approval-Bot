@@ -4,7 +4,3 @@ pymongo[srv]
 Flask==2.2.2
 gunicorn==20.1.0
 aiohttp==3.8.1
-
-# Don't Remove Credit @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-# Ask Doubt on telegram @KingVJ01
