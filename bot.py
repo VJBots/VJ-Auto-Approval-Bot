@@ -59,10 +59,10 @@ async def op(_, m :Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🗯 Channel", url="https://t.me/vj_botz"),
-                        InlineKeyboardButton("💬 Support", url="https://t.me/vj_bot_disscussion")
+                        InlineKeyboardButton("🗯 Channel", url="https://t.me/about_tosuu"),
+                        InlineKeyboardButton("💬 Support", url="https://t.me/about_tosuu")
                     ],[
-                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/vjmasterblastbot?startgroup")
+                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="http://t.me/Nothing_auto_approval_bot?startgroup")
                     ]
                 ]
             )
@@ -73,7 +73,7 @@ async def op(_, m :Message):
             keyboar = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("💁‍♂️ Start me private 💁‍♂️", url="https://t.me/vjmasterblastbot?startgroup")
+                        InlineKeyboardButton("💁‍♂️ Start me private 💁‍♂️", url="http://t.me/Nothing_auto_approval_bot?startgroup")
                     ]
                 ]
             )
@@ -101,10 +101,10 @@ async def chk(_, cb : CallbackQuery):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🗯 Channel", url="https://t.me/VJ_Botz"),
-                        InlineKeyboardButton("💬 Support", url="https://t.me/vj_bot_disscussion")
+                        InlineKeyboardButton("🗯 Channel", url="https://t.me/about_tosuu"),
+                        InlineKeyboardButton("💬 Support", url="https://t.me/about_tosuu")
                     ],[
-                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/vjmasterblastbot?startgroup")
+                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="http://t.me/Nothing_auto_approval_bot?startgroup")
                     ]
                 ]
             )
