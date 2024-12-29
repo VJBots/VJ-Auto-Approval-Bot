@@ -40,7 +40,11 @@ async def op(_, m :Message):
     try:
         await app.get_chat_member(cfg.CHID, m.from_user.id)
     except:
-        invite_link = await app.create_chat_invite_link(int(cfg.CHID))
+        try:
+            invite_link = await app.create_chat_invite_link(int(cfg.CHID))
+        except:
+            await m.reply("**Make Sure I Am Admin In Your Channel**")
+            return 
         key = InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton("🍿 Join Update Channel 🍿", url=invite_link.invite_link),
@@ -48,6 +52,7 @@ async def op(_, m :Message):
             ]]
         ) 
         await m.reply_text("**⚠️Access Denied!⚠️\n\nPlease Join My Update Channel To Use Me.If You Joined The Channel Then Click On Check Again Button To Confirm.**", reply_markup=key)
+        return 
     keyboard = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton("🗯 Channel", url="https://t.me/vj_botz"),
@@ -66,6 +71,7 @@ async def chk(_, cb : CallbackQuery):
         await app.get_chat_member(cfg.CHID, cb.from_user.id)
     except:
         await cb.answer("🙅‍♂️ You are not joined my channel first join channel then check again. 🙅‍♂️", show_alert=True)
+        return 
     keyboard = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton("🗯 Channel", url="https://t.me/vj_botz"),
