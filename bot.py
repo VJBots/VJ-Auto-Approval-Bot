@@ -17,21 +17,6 @@ app = Client(
     bot_token=cfg.BOT_TOKEN
 )
 
-gif = [
-    'https://te.legra.ph/file/a1b3d4a7b5fce249902f7.mp4',
-    'https://te.legra.ph/file/0c855143a4039108df602.mp4',
-    'https://te.legra.ph/file/d7f3f18a92e6f7add8fcd.mp4',
-    'https://te.legra.ph/file/9e334112ee3a4000c4164.mp4',
-    'https://te.legra.ph/file/652fc39ae6295272699c6.mp4',
-    'https://te.legra.ph/file/702ca8761c3fd9c1b91e8.mp4',
-    'https://te.legra.ph/file/a1b3d4a7b5fce249902f7.mp4',
-    'https://te.legra.ph/file/d7f3f18a92e6f7add8fcd.mp4',
-    'https://te.legra.ph/file/0c855143a4039108df602.mp4',
-    'https://te.legra.ph/file/9e334112ee3a4000c4164.mp4',
-    'https://te.legra.ph/file/702ca8761c3fd9c1b91e8.mp4'
-]
-
-
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Main process ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 @app.on_chat_join_request(filters.group | filters.channel & ~filters.private)
@@ -41,8 +26,7 @@ async def approve(_, m : Message):
     try:
         add_group(m.chat.id)
         await app.approve_chat_join_request(op.id, kk.id)
-        img = random.choice(gif)
-        await app.send_video(kk.id,img, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @VJ_Botz __**".format(m.from_user.mention, m.chat.title))
+        await app.send_message(kk.id, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @VJ_Botz __**".format(m.from_user.mention, m.chat.title))
         add_user(kk.id)
     except errors.PeerIdInvalid as e:
         print("user isn't start bot(means group)")
@@ -61,8 +45,6 @@ async def op(_, m :Message):
                     [
                         InlineKeyboardButton("🗯 Channel", url="https://t.me/vj_botz"),
                         InlineKeyboardButton("💬 Support", url="https://t.me/vj_bot_disscussion")
-                    ],[
-                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/vjmasterblastbot?startgroup")
                     ]
                 ]
             )
@@ -73,7 +55,7 @@ async def op(_, m :Message):
             keyboar = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("💁‍♂️ Start me private 💁‍♂️", url="https://t.me/vjmasterblastbot?startgroup")
+                        InlineKeyboardButton("💁‍♂️ Start me private 💁‍♂️", url="https://t.me/vj_botz")
                     ]
                 ]
             )
@@ -103,8 +85,6 @@ async def chk(_, cb : CallbackQuery):
                     [
                         InlineKeyboardButton("🗯 Channel", url="https://t.me/VJ_Botz"),
                         InlineKeyboardButton("💬 Support", url="https://t.me/vj_bot_disscussion")
-                    ],[
-                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/vjmasterblastbot?startgroup")
                     ]
                 ]
             )
